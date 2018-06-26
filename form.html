@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form practise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form method="GET">
+        Name:
+        <input type="text" name="name" required>
+        <br> E-mail:
+        <input type="email" name="email" required>
+        <br> Password:
+        <input type="password" name="password" required minlength="5">
+        <br> Religion: <br>
+        <input type="radio" value="JEDI" name="religion">JEDI
+        <br>
+        <input type="radio" value="Sith" name="religion">Sith
+        <br>
+        <input type="radio" value="First Order" name="religion">First Order
+        <br>
+        <input type="radio" value="Other" name="religion">Other
+        <br> Pets:
+        <br>
+        <input type="checkbox" value="cat" name="animal">cat
+        <br>
+        <input type="checkbox" value="dog" name="animal">dog
+        <br>
+        <input type="checkbox" value="jaguar" name="animal">jaguar
+        <br>
+        <input type="checkbox" value="unidentified" name="animal">unidentified
+        <br> Smoking:
+        <select name="smoking">
+            <option value="yes">Yes</option>
+            <option value="no" >No</option>
+            <option value="if i'm drunk">If i'm drunk</option>
+        </select>
+        <br>
+        <br> Honestly:
+        <select name="realsmoking" multiple>
+            <option value="smokes" >Yes</option>
+            <option value="doesntsmoke" >No</option>
+            <option value="sometimes" >If i'm drunk</option>
+        </select>
+        <br>
+        <input type="submit" value="let me in">
+        <input type="reset" value="reset it">
+    </form>
+</body>
+
+</html>

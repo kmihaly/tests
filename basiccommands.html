@@ -1,0 +1,152 @@
+<!-- set the filetype to html at the right bottom of the window then press ctrl+space to get the startkit of a html doc -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"/> the css file is not used so far, it's an attribute -->
+    <script> //the js file is not used so far, it's an attribute src="main.js"
+
+        // Focus = Changes the background color of the input below to yellow
+        function focusFunction() {
+            document.getElementById("myInput").style.background = "yellow";
+        }
+
+        // No focus = Changes the background color of the same input to red
+        function blurFunction() {
+            document.getElementById("myInput").style.background = "red";
+        }
+        let output = document.getElementById("show");
+        let slider_2 = document.getElementById("myRange");
+        
+        output.innerHTML = slider_2.value; // Display the default slider value 
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider_2.oninput = function () {
+            output.innerHTML = this.value;
+        }
+
+      
+    </script>
+
+    <style>
+        .slidecontainer {
+            width: 100%;
+            /* Width of the outside container */
+        }
+
+        /* The slider itself */
+
+        .slider {
+            -webkit-appearance: none;
+            /* Override default CSS styles */
+            appearance: none;
+            width: 100%;
+            /* Full-width */
+            height: 25px;
+            /* Specified height */
+            background: #d3d3d3;
+            /* Grey background */
+            outline: none;
+            /* Remove outline */
+            opacity: 0.7;
+            /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s;
+            /* 0.2 seconds transition on hover */
+            transition: opacity .2s;
+        }
+
+        /* Mouse-over effects */
+
+        .slider:hover {
+            opacity: 1;
+            /* Fully shown on mouse-over */
+        }
+
+        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* Override default look */
+            appearance: none;
+            width: 25px;
+            /* Set a specific slider handle width */
+            height: 25px;
+            /* Slider handle height */
+            background: #4CAF50;
+            /* Green background */
+            cursor: pointer;
+            /* Cursor on hover */
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            /* Set a specific slider handle width */
+            height: 25px;
+            /* Slider handle height */
+            background: #4CAF50;
+            /* Green background */
+            cursor: pointer;
+            /* Cursor on hover */
+        }
+
+        img {
+            width: 300px;
+            height:200px;
+            transition: all 2s;
+        }
+        
+        img:hover {
+            transform: scale(1.4);
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- use ctrl+k and ctrl+c to get a comment section like this, and you can write any comments without being layed out OR 
+    select a part of the html and press the same buttons-->
+
+<!-- just type ".myClass" and push enter to get a div with a classname like the following -->
+<div class="myClass" ></div>
+<!-- just type "#myId" and push enter to get a div with an ID like the following -->
+<div id="myId"></div>
+<h3>Here are some interesting html tools:</h3>
+<p contenteditable="true">This text is editable.</p>
+<input type="text" onfocus="focusFunction()" onblur="blurFunction()" value="this changes as you click in or out" size="80"
+    id="myInput">
+
+<div class="slidecontainer">
+    <p>Default range slider:</p>
+    <input type="range" min="1" max="100" value="50">
+
+    <p>Custom range slider:</p>
+    <input type="range" min="1" max="100" value="60" class="slider" id="myRange">
+</div>
+<p><span id="show">50</span></p>
+<p>These are two types of meter's use:</p>
+<p>min and max defined: </p><meter value="2" min="0" max="10">2 out of 10</meter><br>
+<p>a value between 0 and 1:</p><meter value="0.6">60%</meter>
+<p>This is a textarea:<br>
+<textarea rows="4" cols="50">
+Slim Shady, brain dead like Jim Brady
+I'm a M-eighty, you Little like that Kim lady
+I'm buzzin', Dirty Dozen, naughty rotten rhymer
+Cursin' at you players worse than Marty Schottenheimer
+</textarea></p>
+<div id="container">
+<img src="http://www.gamechannel.hu/pictures/hirblock/25-eves-evfordulojat-unnepli-a-mortal-kombat_1.jpg">
+<img src="http://i0.wp.com/shoryuken.com/wp-content/uploads/2016/06/Shao-Kahn-MK9.jpg">
+<img src="https://static3.srcdn.com/wordpress/wp-content/uploads/2016/09/header-mortal-kombat-x-sub-zero-vs-scorpion.jpg">
+</div>
+</body>
+</html>
